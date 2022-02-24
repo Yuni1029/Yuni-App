@@ -1,31 +1,66 @@
 
-import style from "styled-components";
+import styled from "styled-components";
 
-const Container = style.div `
+const Container = styled.div `
     height: 100vh;
-    background-color: #28bec6;
     display: flex;
-`
-
-const WelcomeTitle = style.h1 `
-    font-size: 100px;
-    color: blue;
+    background-color:#78ABE3;
     text-align: center;
-    margin-top: 30px;
-    background-color: beige;
 `;
 
-const RightSide = style.div`
-    height: 100vh;
-    background-color:blue;
-    font-size: 100px;
+const LeftSide = styled.div `
+    height:100vh;
+    width: 50%;
+    background-image: url("https://64.media.tumblr.com/18c23d15eab05e416345ea480bf204c2/tumblr_odh9w1T60P1vztawho1_640.jpg");
+`;
+
+const WelcomeTitle = styled.h1`
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top:100px;
+    padding-left: 30px;
+    font-family: Cursive;
+`;
+
+const Input = styled.input`
+    width:100px;
 `
 
+const Label = styled.label`
+    font-size: 30px;
+    color: white;
+    font-family: Cursive;
+`
+
+const RightSide = styled.div`
+    height: 100vh;
+    font-size: 100px;
+`;
+
 function LoginPage() {
-    return <Container> 
-        <WelcomeTitle> Left Half Page</WelcomeTitle>;
-        <RightSide> Right Half Page</RightSide>;
-    </Container>
+    return (
+        <Container>
+            <LeftSide></LeftSide>
+            <RightSide>
+                <WelcomeTitle> Welcome Back!</WelcomeTitle>
+                <Label> ID </Label>
+                    <Input></Input>
+                    <br></br>
+                <Label> Password </Label>
+                    <Input></Input>
+            </RightSide>
+        </Container>
+    )
+    // return (<Container> 
+    //     <LeftSide>
+    //         <WelcomeTitle> Welcome Back!</WelcomeTitle>
+    //         <Label for="Me"> ID </Label>
+    //         <Input type="text" id="Me"> </Input>
+    //         <Label> Password </Label>
+    //     </LeftSide>
+    //     <RightSide></RightSide>
+    // </Container>)
 }
 
 export default LoginPage
