@@ -39,6 +39,11 @@ const RightSide = styled.div`
 `;
 
 const Button = styled.button`
+    border:none;
+    border-radius: 10px;
+    width: 80%;
+    background-color: darkblue;
+    color:white;
 `;
 
 function LoginPage() {
@@ -51,7 +56,7 @@ function LoginPage() {
                     <Input></Input>
                     <br></br>
                 <Label> Password </Label>
-                    <Input></Input>
+                    <Input type="password"></Input>
                     <br></br>
                 <Button>Log in</Button>
             </RightSide>
