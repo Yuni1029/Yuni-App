@@ -38,6 +38,9 @@ const RightSide = styled.div`
     font-size: 100px;
 `;
 
+const Button = styled.button`
+`;
+
 function LoginPage() {
     return (
         <Container>
@@ -49,6 +52,8 @@ function LoginPage() {
                     <br></br>
                 <Label> Password </Label>
                     <Input></Input>
+                    <br></br>
+                <Button>Log in</Button>
             </RightSide>
         </Container>
     )
