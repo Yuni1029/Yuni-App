@@ -1,5 +1,6 @@
 
 import styled from "styled-components";
+import React, { useState } from "react";
 
 const Container = styled.div `
     height: 100vh;
@@ -41,12 +42,21 @@ const RightSide = styled.div`
 const Button = styled.button`
     border:none;
     border-radius: 10px;
-    width: 80%;
-    background-color: darkblue;
-    color:white;
+    width: 50%;
+    background-color: beige;
 `;
 
 function LoginPage() {
+    const [user, setUser] = useState({
+        id:"",
+        password:""
+    });
+    const {id , password} = user;
+    //create a function route to mainpage 
+    const linkToMainPage= () => {
+        alert("HI")
+    };
+
     return (
         <Container>
             <LeftSide></LeftSide>
@@ -58,7 +68,7 @@ function LoginPage() {
                 <Label> Password </Label>
                     <Input type="password"></Input>
                     <br></br>
-                <Button>Log in</Button>
+                <Button onClick={linkToMainPage}>Log in</Button>
             </RightSide>
         </Container>
     )

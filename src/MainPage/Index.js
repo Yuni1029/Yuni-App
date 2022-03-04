@@ -8,5 +8,6 @@ function MainPage() {
     return (
         <Container></Container>
 )
+    }
 
-export default MainPage;
+export default MainPage
