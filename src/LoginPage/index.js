@@ -1,6 +1,7 @@
 
 import styled from "styled-components";
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom"
 
 const Container = styled.div `
     height: 100vh;
@@ -47,15 +48,33 @@ const Button = styled.button`
 `;
 
 function LoginPage() {
+    const history = useHistory();
+
     const [user, setUser] = useState({
         id:"",
         password:""
-    });
+    }); //when we first load a page we initialize initialize states to emptye string or null/0.
+    //states will be filled in when the user does specific actions
     const {id , password} = user;
     //create a function route to mainpage 
     const linkToMainPage= () => {
-        alert("HI")
+        history.push("/main")
     };
+
+//replace empty string to the following input by the user
+
+const putUserInfo = (e) => {
+    const {name, value} = e.target;
+    console.log(name);
+    console.log(value);
+    setUser ({
+        ...user,
+        [name]:value,
+        //avoid reputation of repeating function using the same code
+    });
+    console.log(user);
+};
+//e stands for event
 
     return (
         <Container>
@@ -63,10 +82,20 @@ function LoginPage() {
             <RightSide>
                 <WelcomeTitle> Welcome Back!</WelcomeTitle>
                 <Label> ID </Label>
-                    <Input></Input>
+                    <Input 
+                    type="text" 
+                    value={id} 
+                    name="id" 
+                    onChange={putUserInfo}>
+                        </Input>
                     <br></br>
                 <Label> Password </Label>
-                    <Input type="password"></Input>
+                    <Input 
+                    type="password"
+                    value={password} 
+                    name="password" 
+                    onChange={putUserInfo}>
+                        </Input>
                     <br></br>
                 <Button onClick={linkToMainPage}>Log in</Button>
             </RightSide>
