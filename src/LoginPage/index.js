@@ -57,9 +57,26 @@ function LoginPage() {
     //states will be filled in when the user does specific actions
     const {id , password} = user;
     //create a function route to mainpage 
-    const linkToMainPage= () => {
-        history.push("/main")
-    };
+
+
+
+const linkToMainPage = () => {
+    if (id==="" || password ==="") {
+        alert(`ID or Password is empty.`);
+        return
+    }
+
+    if (id=== "Yuni" && password=== "1234") {
+        history.push("/main");
+    }
+
+}
+
+//if id/email is empty string and password is empty
+//alert!! if statement
+
+//other if id is equal to your name and password is 1234
+//alert youo may log in!! another if statement
 
 //replace empty string to the following input by the user
 
@@ -74,6 +91,9 @@ const putUserInfo = (e) => {
     });
     console.log(user);
 };
+
+
+
 //e stands for event
 
     return (
