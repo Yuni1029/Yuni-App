@@ -19,30 +19,45 @@ const Info = styled.h2`
     font-style: Italic;
 `;
 
-const Comment = styled.h6`
-    color: white;
+const Button = styled.button`
+    border:none;
+    border-radius: 10px;
+    width: 30%;
+    background-color: white;
+    font-family: Cursive;
 `
-
 
 function MainPage() {
     return (
         <Container>
             <Introduce> Hello, I am Yuni! </Introduce>
             <Info> Student of OO Highschool / Aiming to become an Illustrator </Info>
-            <input 
+            <a href="https://www.instagram.com/"> <input 
                 type="image" 
                 src="https://www.lifepng.com/wp-content/uploads/2020/10/580b57fcd9996e24bc43c521.png" 
                 alt="instagram" 
                 width="40px" 
                 height="40px"> 
             </input>
-            <input 
+            </a>
+            <a href="https://www.facebook.com/">
+                <input 
+                type="image" 
+                src="https://holyspiritfremont.org/wp-content/uploads/2020/10/facebook-logo.png"
+                alt="facebook"
+                width="50px"
+                height="40px">
+                </input>
+            </a>
+            <a href="https://www.artstation.com/?sort_by=community"><input 
                 type="image"
                 src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/27_Artstation_logo_logos-512.png"
                 alt="artstation"
                 width="40px"
                 height="40px">
             </input>
+            </a>
+            <a href="https://www.deviantart.com/">
             <input
                 type="image"
                 src="https://cdn-icons-png.flaticon.com/512/889/889091.png"
@@ -50,6 +65,8 @@ function MainPage() {
                 width="37px;"
                 height="37px">
             </input>
+            </a>
+            <a href="https://www.clipstudio.net/en/">
             <input 
                 type="image"
                 src="https://www.clipstudio.net/view/promotion/comiccontest/img/prize_csp.png"
@@ -57,18 +74,19 @@ function MainPage() {
                 width="50px"
                 height="40px">
             </input>
+            </a>
             <br></br>
             <br></br>
             <input 
                 type="image"
-                src="https://cdn.pixabay.com/photo/2021/04/29/05/04/desert-6215516_960_720.jpg"
+                src="https://as1.ftcdn.net/v2/jpg/03/69/43/20/1000_F_369432072_Cf1uESr5W4LJdoNjWzL2jamXXg5n5547.jpg"
                 alt="painting"
                 width="50%"
                 height="50%"
                 >
             </input>
-            <Comment> ※free source painting </Comment>
-
+            <br></br>
+            <Button> Learn More </Button>
         </Container>
 )
     }
