@@ -11,12 +11,13 @@ const Introduce = styled.h1`
     color: white;
     font-weight: 700;
     font-size: 40px;
-    font-family: Cursive;
+    font-family: 'Quicksand', sans-serif;
 `;
 
 const Info = styled.h2`
     color:white;
-    font-style: Italic;
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
 `;
 
 const Button = styled.button`
@@ -24,7 +25,7 @@ const Button = styled.button`
     border-radius: 10px;
     width: 30%;
     background-color: white;
-    font-family: Cursive;
+    font-family: 'Quicksand', sans-serif;
 `
 
 function MainPage() {
@@ -86,7 +87,7 @@ function MainPage() {
                 >
             </input>
             <br></br>
-            <Button> Learn More </Button>
+            <Button onclick="window.location.href = 'New Page';"> Learn More </Button>
         </Container>
 )
     }
