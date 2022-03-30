@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import './App.css';
 import LoginPage from './LoginPage'; //route 
 import MainPage from './MainPage';
+import NewPage from './NewPage';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Route path="/" component={LoginPage} />
         <Route path="/main" component={MainPage} />
+        <Route path="/new" component={NewPage} />
       </Router>
     </div>
   )

@@ -47,6 +47,20 @@ const Button = styled.button`
     background-color: beige;
 `;
 
+
+
+
+//if id/email is empty string and password is empty
+//alert!! if statement
+
+//other if id is equal to your name and password is 1234
+//alert youo may log in!! another if statement
+
+//replace empty string to the following input by the user
+
+
+
+//e stands for event
 function LoginPage() {
     const history = useHistory();
 
@@ -58,8 +72,7 @@ function LoginPage() {
     const {id , password} = user;
     //create a function route to mainpage 
 
-
-
+    
 const linkToMainPage = () => {
     if (id==="" || password ==="") {
         alert(`ID or Password is empty.`);
@@ -71,15 +84,6 @@ const linkToMainPage = () => {
     }
 
 }
-
-//if id/email is empty string and password is empty
-//alert!! if statement
-
-//other if id is equal to your name and password is 1234
-//alert youo may log in!! another if statement
-
-//replace empty string to the following input by the user
-
 const putUserInfo = (e) => {
     const {name, value} = e.target;
     console.log(name);
@@ -91,10 +95,6 @@ const putUserInfo = (e) => {
     });
     console.log(user);
 };
-
-
-
-//e stands for event
 
     return (
         <Container>
@@ -121,19 +121,6 @@ const putUserInfo = (e) => {
             </RightSide>
         </Container>
     )
-    // return (<Container> 
-    //     <LeftSide>
-    //         <WelcomeTitle> Welcome Back!</WelcomeTitle>
-    //         <Label for="Me"> ID </Label>
-    //         <Input type="text" id="Me"> </Input>
-    //         <Label> Password </Label>
-    //     </LeftSide>
-    //     <RightSide></RightSide>
-    // </Container>)
 }
 
 export default LoginPage
-
-/*Flex container: 
-Flex item: align item next to each other
-*/

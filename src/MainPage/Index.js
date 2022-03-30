@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom"
 
 const Container = styled.div `
     background-image: url("https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHVycGxlJTIwZ3JhZGllbnR8ZW58MHx8MHx8&w=1000&q=80");
@@ -28,7 +30,19 @@ const Button = styled.button`
     font-family: 'Quicksand', sans-serif;
 `
 
+
+
 function MainPage() {
+    const history = useHistory();
+
+const linkToNewPage= () => {
+    if (true) {
+        history.push("/new");
+    }
+    
+}
+
+
     return (
         <Container>
             <Introduce> Hello, I am Yuni! </Introduce>
@@ -87,9 +101,9 @@ function MainPage() {
                 >
             </input>
             <br></br>
-            <Button onclick="window.location.href = 'New Page';"> Learn More </Button>
+            <Button onClick={linkToNewPage}> Learn More </Button>
         </Container>
-)
-    }
+    )
+}
 
 export default MainPage
