@@ -1,39 +1,91 @@
 import styled from "styled-components";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom"
+import { ProgressBar, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const Container = styled.div `
-    background-color:#78ABE3;
-    font-family: Cursive;
+
+const Container = styled.div`
+`;
+
+const AboutMeContainer = styled.div `
+    background-color: #FF9E9E;
+    height: 100vh;
+`;
+
+const AboutMe = styled.h1`
+    font-weight: 700;
+    font-size: 70px;
     text-align: center;
-`;
+`
 
-const Introduce = styled.h1 `
+const Introudction = styled.h4`
+    text-align: right;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: 'Quicksand', sans-serif;
+    padding-right: 80px;
+    padding-top:80px;
+`
+
+const Portrait = styled.div`
+    margin-top: -150px;
+    margin-left: 130px;
+`
+
+const Detail = styled.h6`
+    text-align: right;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    padding-right: 80px;
+`
+
+const SkillLevelContainer = styled.div`
+    background-color: #9EC1FF;
+    height: 100vh;
+`
+const Title = styled.h1`
+    font-weight: 700;
+    font-size: 70px;
     text-align: center;
-`;
-
-const Hello = styled.h6 `
-`;
+`
 
 
 function NewPage() {
     return (
         <Container>
-            <Introduce> About Me </Introduce>
-            <br></br>
-            <input 
-            type="image" 
-            src="https://avvenice.com/41901/kuboraum-mask-k17-black-shine-k17-bs-optical-glasses-kuboraum-eyewear.jpg"
-            alt="glasses"
-            width="400px"
-            height="400px">
-            </input>
-            <Hello> Hello I am Yuni Shin. I am a highschool student from South Korea. 
-                <br></br> 
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br></br>
-                Name:     Yuni <br></br> Email:     Yuni@gmail.com <br></br>Phone:     010 9999 9999 <br></br> Date of Birth:     4 December 2005
-            </Hello>
+            <AboutMeContainer>      
+                <AboutMe> 
+                    About Me 
+                </AboutMe>
+                <Introudction> 
+                    Hello, I'm a student from Korea.
+                </Introudction>
+                <Detail> 
+                    Name: Yuni
+                    <br></br>
+                    Email: anypany@naver.com
+                    <br></br>
+                    Phone: 010 0000 0000
+                    <br></br>
+                    Date of birth: 4 December 2005
+                </Detail>
+                <Portrait> 
+                    <img
+                    src="https://media.istockphoto.com/vectors/portrait-of-a-shorthaired-girl-androgin-lookingwith-asidelongglance-vector-id1190626181?k=20&m=1190626181&s=612x612&w=0&h=cqzcsUXp3pPDeFYJqspZY7amsnGzv9X9ZGQatwUeKEo="
+                    alt="portrait"
+                    width="400px"
+                    height="400px">
+                    </img>
+                </Portrait>
+            </AboutMeContainer>
+            <SkillLevelContainer>
+                <Title>
+                    Skill Level
+                </Title>
+
+            </SkillLevelContainer>
         </Container>
     )
 }
