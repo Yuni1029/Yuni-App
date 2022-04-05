@@ -37,13 +37,12 @@ const Label = styled.label`
 
 const RightSide = styled.div`
     height: 100vh;
-    font-size: 100px;
+    font-size: 60px;
 `;
 
 const Button = styled.button`
     border:none;
     border-radius: 10px;
-    width: 50%;
     background-color: beige;
 `;
 
