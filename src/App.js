@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 // import logo from './logo.svg';
 import './App.css';
 import LoginPage from './LoginPage'; //route 
-import MainPage from './MainPage';
+import MainPage from './MainPage/index2';
 import NewPage from './NewPage';
 
 

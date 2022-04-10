@@ -38,7 +38,8 @@ function MainPage() {
 const linkToNewPage= () => {
     if (true) {
         history.push("/new");
-    }
+    } 
+    //
     
 }
 
