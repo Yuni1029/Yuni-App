@@ -4,6 +4,8 @@ import { useHistory } from "react-router-dom"
 import { ProgressBar, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import "./style.css";
+
 
 const Container = styled.div`
 `;
@@ -44,15 +46,52 @@ const Detail = styled.h6`
 const SkillLevelContainer = styled.div`
     background-color: #9EC1FF;
     height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
 `
 const Title = styled.h1`
     font-weight: 700;
     font-size: 70px;
-    text-align: center;
+    margin-bottom: 40px;
+`
+
+const GPA = styled.h6`
+    width: 100px;
+    margin-left: 450px;
+`
+
+const SAT = styled.h6`
+    width: 100px;
+    margin-left: 450px;
+`
+const TOEFL = styled.h6`
+    width: 100px;
+    margin-left: 450px;
+`
+const APWH = styled.h6`
+    width: 100px;
+    margin-left: 450px;
+`
+
+const APEcon = styled.h6`
+    width: 100px;
+    margin-left: 450px;
+    padding-bottom: 300px;
 `
 
 
+const RowContainer = styled.div`
+display:flex;
+flex-direction: row;
+`;
+
 function NewPage() {
+    const barStyle = {
+        width: "400px",
+        height: "20px",
+        backgroundColor:"white",
+    };
+
     return (
         <Container>
             <AboutMeContainer>      
@@ -80,12 +119,79 @@ function NewPage() {
                     </img>
                 </Portrait>
             </AboutMeContainer>
+
             <SkillLevelContainer>
+
                 <Title>
                     Skill Level
                 </Title>
+                <RowContainer>
+                <GPA>
+                    GPA
+                </GPA>
+                <ProgressBar 
+                    style={barStyle} 
+                    label={`4.8/5.0`}
+                    max={5.0} 
+                    min={0.0} 
+                    now={4.8} 
+                />
+                </RowContainer>
+                <RowContainer>
+                <SAT>
+                    SAT
+                </SAT>
+                <ProgressBar 
+                    style={barStyle} 
+                    label={`1480 / 1600`}
+                    max={1600} 
+                    min={0} 
+                    now={1480} 
+                />
+                </RowContainer>
+
+                <RowContainer>
+                <TOEFL>
+                    TOEFL
+                </TOEFL>
+                <ProgressBar 
+                    style={barStyle} 
+                    label={`70/120`}
+                    max={120} 
+                    min={0} 
+                    now={70} 
+                />
+                </RowContainer>
+
+                <RowContainer>
+                <APWH>
+                    AP WH
+                </APWH>
+                <ProgressBar 
+                    style={barStyle} 
+                    label={`4 / 5`}
+                    max={5} 
+                    min={0} 
+                    now={4} 
+                />
+                </RowContainer>
+
+                <RowContainer>
+                <APEcon>
+                    AP Econ
+                </APEcon>
+                <ProgressBar 
+                    style={barStyle} 
+                    label={`3 / 5`}
+                    max={5} 
+                    min={0} 
+                    now={3} 
+                />
+                </RowContainer>
 
             </SkillLevelContainer>
+            
+
         </Container>
     )
 }
